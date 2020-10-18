@@ -4,7 +4,8 @@
   "description": "A Discord Bot for my server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "homepage": "https://github.com/arthrc/nosso-server-bot#readme",
   "dependencies": {
     "discord.js": "^12.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5"
   }
 }
