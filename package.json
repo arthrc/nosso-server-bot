@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/arthrc/nosso-server-bot#readme",
   "dependencies": {
-    "discord.js": "^12.3.1"
+    "discord.js": "^12.3.1",
+    "eslint": "^7.11.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.5"
