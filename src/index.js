@@ -2,7 +2,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const Sequelize = require('sequelize');
 
-const { prefix, token } = require('./config.json');
+const { prefix } = require('./config.json');
 
 const sequelize = new Sequelize('database', 'user', 'password', {
 	host: 'localhost',
@@ -99,4 +99,4 @@ client.on('message', message => {
     }
 });
 
-client.login(token);
+client.login(process.env.BOT_TOKEN);

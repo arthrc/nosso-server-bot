@@ -1,1 +1,1 @@
-worker: yarn dev
+worker: node ./src/index.js
