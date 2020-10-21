@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
 	name: 'clara',
 	description: 'Mr spider!',
-	cooldown: 5,
+	cooldown: 0,
 	execute(message) {
         const image =  new Discord.MessageAttachment('./src/assets/mrspider.png')
 
