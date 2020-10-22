@@ -11,9 +11,9 @@ module.exports = {
             .setAuthor('робот', 'https://cdn.discordapp.com/attachments/766833928371437570/768504890757742602/botico.png')
             .setDescription('Então voce quer ajuda meu consagrado, veja a lista de comandos e se divirta digitando p!clara :)')
             .addFields(
-                { name: 'memes', value: 'arthur, azieta, democracia, diego, maidana'},
-                { name: 'úteis', value: 'help, repo'},
-                { name: 'bem feitos', value: 'clara'}
+                { name: 'memes', value: 'arthur, azieta, clara, democracia, diego, maidana, vilella' },
+                { name: 'úteis', value: 'help, repo' },
+                { name: 'WIP', value: 'vaca' }
             )
             .setTimestamp()
             .setFooter('Espero ter ajudado')

@@ -1,28 +1,7 @@
 const fs = require('fs');
 const Discord = require('discord.js');
-const Sequelize = require('sequelize');
 
-const { prefix } = require('./config.json');
-
-const sequelize = new Sequelize('database', 'user', 'password', {
-	host: 'localhost',
-	dialect: 'sqlite',
-	logging: false,
-	storage: 'database.sqlite',
-});
-
-const Counter = sequelize.define('counters', {
-	name: {
-		type: Sequelize.STRING,
-		unique: true,
-    },
-    username: Sequelize.STRING,
-	count: {
-		type: Sequelize.INTEGER,
-		defaultValue: 0,
-		allowNull: false,
-	},
-});
+const { prefix, token } = require('./config.json');
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -38,15 +17,9 @@ const cooldowns = new Discord.Collection();
 
 client.once('ready', () => {
     console.log('Ready!');
-    Counter.sync();
 });
 
 client.on('message', message => {
-    if(message.content === 'fofo' || message.content === 'fofa') async () => {
-        const counter = await Counter.findOne({ where: { name: 'fofo' } });
-        counter.increment('count');
-        return message.channel.send(`Ja falaram fof@ ${counter.count} vezes.`)
-    }
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
@@ -99,4 +72,5 @@ client.on('message', message => {
     }
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login(token);
+//client.login(process.env.BOT_TOKEN);

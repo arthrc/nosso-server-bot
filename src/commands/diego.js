@@ -3,6 +3,6 @@ module.exports = {
 	description: 'Funguinho!',
 	cooldown: 5,
 	execute(message) {
-		message.channel.send('Funguinho no pau pae');
+		message.channel.send('Funguinho no pau, fala tu pae <@190919215803400193>');
 	},
 };
