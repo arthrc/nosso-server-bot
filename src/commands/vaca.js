@@ -7,6 +7,6 @@ module.exports = {
 	execute(message) {
         const image =  new Discord.MessageAttachment('./src/assets/CowPls.gif')
 
-        message.channel.send('r!p https://www.youtube.com/watch?v=ELBVeRDflV0', image);
+        message.channel.send('https://www.youtube.com/watch?v=ELBVeRDflV0', image);
 	},
 };
